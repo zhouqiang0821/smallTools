@@ -1,6 +1,6 @@
-package com.zq.admin.dao;
+package com.zq.smallTool.dao;
 
-import com.zq.admin.model.HolidayInfoModel;
+import com.zq.smallTool.model.HolidayInfoModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

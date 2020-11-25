@@ -1,4 +1,4 @@
-package com.zq.admin.property;
+package com.zq.smallTool.property;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

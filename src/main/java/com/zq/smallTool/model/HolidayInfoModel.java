@@ -1,4 +1,4 @@
-package com.zq.admin.model;
+package com.zq.smallTool.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

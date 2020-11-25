@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zq.admin.dao.HolidayInfoDao">
+<mapper namespace="com.zq.smallTool.dao.HolidayInfoDao">
     <!--  namespace指向对应的dao  -->
     <select id="getAll" resultType="holidayInfoModel">
         select * from holiday_info

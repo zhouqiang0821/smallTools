@@ -14,6 +14,6 @@
         <typeAlias alias="ArrayList" type="java.util.ArrayList"/>
         <typeAlias alias="LinkedList" type="java.util.LinkedList"/>
         <!--    指向model类    -->
-        <package name="com.zq.admin.model"/>
+        <package name="com.zq.smallTool.model"/>
     </typeAliases>
 </configuration>

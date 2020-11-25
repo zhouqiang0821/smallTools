@@ -1,4 +1,4 @@
-package com.zq.admin.utils;
+package com.zq.smallTool.utils;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;

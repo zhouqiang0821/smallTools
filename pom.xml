@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zq</groupId>
-    <artifactId>admin</artifactId>
+    <artifactId>smallTool</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>admin</name>
+    <name>smallTool</name>
     <description>后台管理平台</description>
 
     <properties>

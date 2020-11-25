@@ -1,6 +1,6 @@
-package com.zq.admin.controller;
+package com.zq.smallTool.controller;
 
-import com.zq.admin.service.HolidayInfoService;
+import com.zq.smallTool.service.HolidayInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

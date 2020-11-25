@@ -1,7 +1,7 @@
-package com.zq.admin.schedule;
+package com.zq.smallTool.schedule;
 
-import com.zq.admin.service.HolidayInfoService;
-import com.zq.admin.utils.SendMsmUtils;
+import com.zq.smallTool.service.HolidayInfoService;
+import com.zq.smallTool.utils.SendMsmUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
