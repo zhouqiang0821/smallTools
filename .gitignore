@@ -2,10 +2,12 @@ HELP.md
 target/
 .mvn
 **/src/main/**/target/
-**/src/test/**/target/
+**/src/test/
 admin.iml
 mvnw
 mvnw.cmd
+FETCH_HEAD
+
 ### STS ###
 .apt_generated
 .classpath
