@@ -5,8 +5,8 @@ spring:
     name: smallTools
   datasource:  #数据库配置
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: zhouqiang
-    password: zq19940821ZQaaa
+    username: root
+    password: root
     url: jdbc:mysql://127.0.0.1:3306/zqadmin?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
   mvc:
     view:
