@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zq.admin.dao.HolidayInfoDao">
+    <!--  namespace指向对应的dao  -->
+    <select id="getAll" resultType="holidayInfoModel">
+        select * from holiday_info
+    </select>
+
+    <select id="find" resultType="holidayInfoModel">
+        select * from holiday_info where year = #{year,jdbcType=INTEGER}
+    </select>
+
+    <select id="findNowAndNext" resultType="holidayInfoModel">
+        select * from holiday_info where year = #{year,jdbcType=INTEGER} or year = #{year+1,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insert" parameterType="List">
+        insert into
+        holiday_info
+        (
+        holiday_date, holiday_type, year,type
+        ) values
+        <foreach collection="list" item="detail" index="index" separator=",">
+            (
+            #{detail.holidayDate,jdbcType=VARCHAR},
+            #{detail.holidayType,jdbcType=VARCHAR},
+            #{detail.year,jdbcType=INTEGER},
+            #{detail.type,jdbcType=INTEGER}
+            )
+        </foreach>
+    </insert>
+</mapper>

@@ -1,0 +1,41 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: admin
+  datasource:  #数据库配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: zhouqiang
+    password: zq19940821ZQaaa
+#    url: jdbc:mysql://127.0.0.1:3306/zqadmin?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://62.234.51.145:3306/zqadmin?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+  mvc:
+    view:
+      suffix: .html   # mvc 后缀
+      prefix: classpath:/templates/  # mvc 设置html所在位置
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+      exclude: WEB-INF/**
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
+  thymeleaf:
+    cache: false   # 开发时关闭缓存,不然没法看到实时页面
+mybatis:
+  config-location: classpath:static/mybatis/config/mybatis-config.xml
+  mapper-locations: classpath:static/mybatis/mapper/*Mapper.xml
+
+spider:
+  spider-year: 2020 # 爬取年份的数据
+  proxy-enable: false  # 是否开启动态代理
+  ip-location: 222     #开启的话需要ip地址的存放位置
+  is-city-sleep: true #是否开启市级睡眠
+  city-sleep-time: 30   #开启市级睡眠 的睡眠时间 s
+  is-county-sleep: true #是否开启区 县睡眠
+  county-sleep-time: 15  #开启县级睡眠 的睡眠时间 s
+  get-villagetr: false # 是否获取村、社区信息
+  get-towntr: false # 是否获取乡镇、街道信息
+
+task:
+  holiday-time: 0/1 * * * * ?
