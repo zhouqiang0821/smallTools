@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zq.smallTool.dao.BaseRegionDetailDao">
+    <!--  namespace指向对应的dao  -->
+    <select id="find" resultType="baseRegionDetailModel">
+        select * from base_region_detail where 1 = 1
+
+        <if test="regionCode != null and regionCode != ''">
+            and region_code = #{regionCode,jdbcType=VARCHAR}
+        </if>
+
+        <if test="regionName != null and regionName != ''">
+            and region_name = #{regionName,jdbcType=VARCHAR}
+        </if>
+
+        <if test="pid != null and pid != ''">
+            and pid = #{pid,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <insert id="insert" parameterType="List">
+        insert into
+        base_region_detail
+        (
+        region_code, region_name, pid, type
+        ) values
+        <foreach collection="list" item="detail" index="index" separator=",">
+            (
+            #{detail.regionCode,jdbcType=VARCHAR},
+            #{detail.regionName,jdbcType=VARCHAR},
+            #{detail.pid,jdbcType=VARCHAR},
+            #{detail.type,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="getAllProvince" resultType="string">
+        select region_code from base_region_detail where type = "0"
+    </select>
+
+    <select id="getLastCityForPro" resultType="string">
+        select MAX(region_code) from base_region_detail where pid = #{regionCode,jdbcType=VARCHAR}
+    </select>
+</mapper>
